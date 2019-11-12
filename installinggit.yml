@@ -5,3 +5,7 @@
      apt:
       name: git
       state: present
+   - name: installing maven
+     apt:
+      name: maven
+      state: present   
