@@ -1,5 +1,5 @@
 ---
-- hosts: webserver,appserver
+- hosts: webserver
   become: yes
   tasks:
   - name: installing webserver on ubuntu
