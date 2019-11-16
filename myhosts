@@ -1,10 +1,8 @@
 [webserver]
 172.31.42.164
 172.31.12.48
-172.31.42.252
-172.31.45.17
-172.31.39.196
-172.31.43.1
+172.31.18.163
+172.31.18.127
 
 [appserver]
 172.31.12.48
@@ -17,6 +15,6 @@
 
 
 [webserver:vars]
-webserversOnubuntu=apache2
-webserversonRedhat=httpd
+ubuntu=apache2
+redhat=httpd
 
