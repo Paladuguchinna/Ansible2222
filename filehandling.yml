@@ -1,0 +1,31 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - include_tasks: files1.yml
+  - name: install webserver on ubuntu
+    apt:
+     name: apache2
+     state: present
+    when: ansible_os_family == "Debian"
+  - name: starting service
+    service:
+     name: apache2
+     state: started
+    when: ansible_os_family == "Debian"
+  - name: installing webserver on redhat
+    yum:
+     name: httpd
+     state: present
+    when: ansible_os_family == "RedHat"
+  - name: starting webserver sevices   
+    service:
+     name: httpd
+     state: started
+    when: ansible_os_family == "RedHat"
+  - name: copy index.j2 file intio anisble node side 
+    template:
+     src: edit.j2
+     dest: /var/www/html/index.html
+  
+
