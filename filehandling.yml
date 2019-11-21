@@ -26,6 +26,6 @@
   - name: copy index.j2 file intio anisble node side 
     template:
      src: edit.j2
-     dest: /var/www/html/index.html
+     dest: /var/www/html/index.htm
   
 
