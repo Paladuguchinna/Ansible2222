@@ -1,0 +1,15 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: installing tomcat8 on ubuntu
+    apt:
+     name: tomcat8
+     state: present
+     update_cache: yes
+    when: ansible_os_family == "Debian"
+  - name: restarting service
+    service:
+     name: tomcat8
+     state: restarted
+    when: ansible_os_family == "Debian"

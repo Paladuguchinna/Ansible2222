@@ -1,0 +1,25 @@
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: installing webserver on redhat
+    yum:
+     name: httpd
+     state: present
+    notify: 
+    - restartwebserver
+    when: ansible_os_family == "RedHat"
+  - name: copy edit.j2 into websever
+    template:
+     src: edit.j2
+     dest: /var/www/html/index.html
+    notify: 
+    - restartwebserver
+    when: ansible_os_family == "RedHat"
+  handlers:
+  - name: restartwebserver
+    service:
+     name: httpd
+     state: started
+     
+
+
