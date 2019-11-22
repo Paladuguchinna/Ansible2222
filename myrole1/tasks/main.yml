@@ -1,8 +1,0 @@
----
-# tasks file for myrole1
-- name: installing git
-  apt:
-   name: git
-   state: present
-   update-cache: yes
-
