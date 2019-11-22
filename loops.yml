@@ -1,0 +1,12 @@
+---
+- hosts: 172.31.42.164
+  become: yes
+  tasks:
+  - name: installing softwares
+    apt:
+     name: "{{item}}"
+     state: present
+    loop: 
+     - git
+     - tree
+     - wget 

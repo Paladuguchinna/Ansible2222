@@ -1,0 +1,20 @@
+---
+- hosts: 172.31.42.164
+  become: yes
+  tasks:
+  - name: installing apache2
+    apt:
+     name: apache2
+     state: present
+    tags: 1st
+  - name: installing tree
+    apt:
+     name: tree
+     state: present
+    tags: 2nd
+  - name: installing git
+    apt: 
+     name: wget
+     state: present
+    tags: 3rd
+
