@@ -2,5 +2,5 @@
 - hosts: appserver
   become: yes
   roles:
-   - { role: mytomcatonubuntu, when: ansible_os_fiamily == "Debian"} 
+   - { role: mytomcatonubuntu } 
 

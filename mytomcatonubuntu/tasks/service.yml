@@ -4,6 +4,6 @@
    name: tomcat
    daemon_reload: yes
 - name: service permission for tomcat
-  systemd:
+  service:
    name: tomcat
    state: started
