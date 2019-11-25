@@ -1,2 +1,8 @@
 ---
-# tasks file for mytomcatonubuntu
+- include_tasks: javainstallation.yml
+- include_tasks: groupanduser.yml
+- include_tasks: tomcatinstallation.yml
+- include_tasks: directorycreation.yml
+- include_tasks: filepermissions.yml
+- include_tasks: copyconfigfile.yml
+- include_tasks: service.yml

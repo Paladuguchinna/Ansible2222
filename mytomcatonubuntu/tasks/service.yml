@@ -1,0 +1,9 @@
+---
+- name: service permissions for demon
+  systemd:
+   name: tomcat
+   daemon_reload: yes
+- name: service permission for tomcat
+  systemd:
+   name: tomcat
+   state: started
