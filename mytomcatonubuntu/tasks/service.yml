@@ -5,5 +5,5 @@
    daemon_reload: yes
 - name: service permission for tomcat
   service:
-   name: tomcat
    state: started
+   name: tomcat
