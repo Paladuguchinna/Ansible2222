@@ -23,25 +23,25 @@
    path: /opt/tomcat/webapps/
    state: directory
    recurse: yes
-   group: tomcat
+   owner: tomcat
 - name: user as owner for work
   file:
    path: /opt/tomcat/work/
    state: directory
    recurse: yes
-   group: tomcat
+   owner: tomcat
 - name: user as owner for temp
   file:
    path: /opt/tomcat/temp/
    state: directory
    recurse: yes
-   group: tomcat
+   owner: tomcat
 - name: user as owner for logs
   file: 
    path: /opt/tomcat/logs/
    state: directory
    recurse: yes
-   group: tomcat
+   owner: tomcat
 
 
 
