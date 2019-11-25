@@ -1,0 +1,10 @@
+---
+- name: creating directory
+  file:
+   path: /opt/tomcat
+   state: directory
+- name: tarfile extraction
+  command:
+   cmd: sudo tar xzvf /home/cherukuri/apache-tomcat-8.5.47.tar.gz -C /opt/tomcat --strip-components=1
+   creates: /opt/tomcat/LICENSE
+   
